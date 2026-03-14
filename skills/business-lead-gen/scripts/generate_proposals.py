@@ -209,7 +209,7 @@ def main():
     
     # Save proposals
     if not args.preview:
-        save_to_csv(proposals, args.output)
+        save_proposals(proposals, args.output)
     else:
         print(f"\n⚠️  Preview mode - not saving. Remove --preview to save.")
     

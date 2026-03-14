@@ -1,0 +1,101 @@
+business_name,address,phone,email,industry,location,google_maps_url,has_website,notes
+Tony's Pizza,123 Main St Brooklyn NY,(718) 555-0101,info@tonyspizzabrooklyn.com,restaurant,New York,https://maps.google.com/...,False,Family-owned since 1985
+Mama's Kitchen,456 Oak Ave Queens NY,(347) 555-0102,contact@mamaskitchen.com,restaurant,New York,https://maps.google.com/...,False,Home cooking
+Joe's Auto Repair,789 First Ave Bronx NY,(718) 555-0103,service@joesautorepair.com,services,New York,https://maps.google.com/...,False,Full service garage
+Sunrise Bakery,321 Second St Manhattan NY,(212) 555-0104,hello@sunrisebakery.com,restaurant,New York,https://maps.google.com/...,False,Fresh bread daily
+City Laundromat,654 Third Ave Brooklyn NY,(718) 555-0105,info@citylaundromat.com,services,New York,https://maps.google.com/...,False,24/7 open
+Green Garden Cafe,987 Park Slope NY,(347) 555-0106,hello@greengardencafe.com,restaurant,New York,https://maps.google.com/...,False,Organic vegetarian
+Mike's Plumbing,246 Atlantic Ave Brooklyn NY,(718) 555-0107,mike@mikesplumbing.com,services,New York,https://maps.google.com/...,False,Licensed plumber
+Best Buy Electronics,135 Flatbush Ave Brooklyn NY,(718) 555-0108,sales@bestbuyelectronics.com,retail,New York,https://maps.google.com/...,False,Local electronics store
+Fashion Boutique,864 Fifth Ave Manhattan NY,(212) 555-0109,info@fashionboutique.com,retail,New York,https://maps.google.com/...,False,Women's clothing
+Express Cleaners,753 Court St Brooklyn NY,(718) 555-0110,help@expresscleaners.com,services,New York,https://maps.google.com/...,False,Dry cleaning
+Sal's Barber Shop,951 Eighth Ave Brooklyn NY,(718) 555-0111,sals@barbershop.com,services,New York,https://maps.google.com/...,False,Traditional barbers
+The Coffee Corner,159 Smith St Brooklyn NY,(347) 555-0112,hello@coffeecorner.com,restaurant,New York,https://maps.google.com/...,False,Artisan coffee
+Dragon Chinese Restaurant,357 Canal St Manhattan NY,(212) 555-0113,order@dragonchinese.com,restaurant,New York,https://maps.google.com/...,False,Takeout & delivery
+ABC Grocery,486 Grand St Brooklyn NY,(718) 555-0114,info@abcgrocery.com,retail,New York,https://maps.google.com/...,False,Local grocery
+Quick Fix Computer Repair,753 Myrtle Ave Brooklyn NY,(347) 555-0115,help@quickfixpc.com,services,New York,https://maps.google.com/...,False,Computer repair
+La Fiesta Mexican Grill,852 Ninth Ave Brooklyn NY,(718) 555-0116,info@lafiestamexican.com,restaurant,New York,https://maps.google.com/...,False,Authentic Mexican
+Prime Cuts Butcher,159 Atlantic Ave Brooklyn NY,(718) 555-0117,orders@primecutsbutcher.com,retail,New York,https://maps.google.com/...,False,Quality meats
+Sparkle Nail Salon,357 Fifth Ave Brooklyn NY,(718) 555-0118,book@sparklenails.com,services,New York,https://maps.google.com/...,False,Full service salon
+Brooklyn Pet Grooming,486 Court St Brooklyn NY,(347) 555-0119,info@brooklynpetgrooming.com,services,New York,https://maps.google.com/...,False,Dog & cat grooming
+The Flower Shop,753 Seventh Ave Brooklyn NY,(718) 555-0120,orders@theflowershop.com,retail,New York,https://maps.google.com/...,False,Fresh flowers daily
+Luigi's Italian Restaurant,951 Eighth Ave Brooklyn NY,(718) 555-0121,info@luigisitalian.com,restaurant,New York,https://maps.google.com/...,False,Family recipes
+Handy Home Improvement,246 Park Ave Brooklyn NY,(347) 555-0122,info@handyhomeimprovement.com,services,New York,https://maps.google.com/...,False,Home repairs
+Sweet Treats Desserts,135 Smith St Brooklyn NY,(718) 555-0123,hello@sweettreats.com,restaurant,New York,https://maps.google.com/...,False,Custom cakes
+Value Mart,864 Broadway Brooklyn NY,(718) 555-0124,info@valuemart.com,retail,New York,https://maps.google.com/...,False,Discount store
+Precision Auto Body,357 Third Ave Brooklyn NY,(718) 555-0125,estimate@precisionautobody.com,services,New York,https://maps.google.com/...,False,Collision repair
+Thai Orchid Restaurant,486 Fifth Ave Brooklyn NY,(347) 555-0126,order@thaiorchid.com,restaurant,New York,https://maps.google.com/...,False,Authentic Thai
+Metro Hardware,753 Atlantic Ave Brooklyn NY,(718) 555-0127,sales@metrohardware.com,retail,New York,https://maps.google.com/...,False,Tools & supplies
+Reliable Electric,951 Court St Brooklyn NY,(718) 555-0128,service@reliableelectric.com,services,New York,https://maps.google.com/...,False,Licensed electrician
+Golden Dragon Seafood,159 Ninth Ave Brooklyn NY,(347) 555-0129,info@goldendragonseafood.com,restaurant,New York,https://maps.google.com/...,False,Fresh seafood
+City Pharmacy,357 Flatbush Ave Brooklyn NY,(718) 555-0130,help@citypharmacy.com,retail,New York,https://maps.google.com/...,False,Local pharmacy
+A-1 Locksmith,486 Myrtle Ave Brooklyn NY,(718) 555-0131,service@a1locksmith.com,services,New York,https://maps.google.com/...,False,24/7 emergency
+Pasta Palace,753 Smith St Brooklyn NY,(347) 555-0132,info@pastapalace.com,restaurant,New York,https://maps.google.com/...,False,Homemade pasta
+Discount Furniture,864 Grand St Brooklyn NY,(718) 555-0133,sales@discountfurniture.com,retail,New York,https://maps.google.com/...,False,Affordable furniture
+Expert HVAC,951 Atlantic Ave Brooklyn NY,(718) 555-0134,service@experthvac.com,services,New York,https://maps.google.com/...,False,Heating & cooling
+Sushi Express,135 Eighth Ave Brooklyn NY,(347) 555-0135,order@sushiexpress.com,restaurant,New York,https://maps.google.com/...,False,Fresh sushi daily
+The Book Nook,246 Fifth Ave Brooklyn NY,(718) 555-0136,hello@booknook.com,retail,New York,https://maps.google.com/...,False,Used & new books
+Pro Clean Janitorial,357 Court St Brooklyn NY,(718) 555-0137,info@procleanjanitorial.com,services,New York,New York,https://maps.google.com/...,False,Commercial cleaning
+Burger Haven,486 Seventh Ave Brooklyn NY,(347) 555-0138,info@burgerhaven.com,restaurant,New York,https://maps.google.com/...,False,Gourmet burgers
+Kids Kingdom Toys,753 Broadway Brooklyn NY,(718) 555-0139,sales@kidskingdomtoys.com,retail,New York,https://maps.google.com/...,False,Toys & games
+Mobile Car Wash,951 Park Ave Brooklyn NY,(718) 555-0140,book@mobilecarwash.com,services,New York,https://maps.google.com/...,False,We come to you
+India Palace Restaurant,159 Smith St Brooklyn NY,(347) 555-0141,order@indiapalace.com,restaurant,New York,https://maps.google.com/...,False,North Indian cuisine
+Sports Cards Plus,357 Atlantic Ave Brooklyn NY,(718) 555-0142,info@sportscardsplus.com,retail,New York,https://maps.google.com/...,False,Collectibles & cards
+Affordable Dentist,486 Ninth Ave Brooklyn NY,(718) 555-0143,appointments@affordabledentist.com,services,New York,https://maps.google.com/...,False,Family dentistry
+Mediterranean Grill,753 Flatbush Ave Brooklyn NY,(347) 555-0144,hello@mediterraneangrill.com,restaurant,New York,https://maps.google.com/...,False,Fresh & healthy
+Garden Center Nursery,864 Myrtle Ave Brooklyn NY,(718) 555-0145,info@gardencenternursery.com,retail,New York,https://maps.google.com/...,False,Plants & supplies
+Quick Lube Oil Change,951 Court St Brooklyn NY,(718) 555-0146,service@quicklube.com,services,New York,https://maps.google.com/...,False,10 minute oil change
+Pizza Hut Express,135 Grand St Brooklyn NY,(347) 555-0147,order@pizzahutexpress.com,restaurant,New York,https://maps.google.com/...,False,Delivery & takeout
+Music World Instruments,246 Eighth Ave Brooklyn NY,(718) 555-0148,sales@musicworldinstruments.com,retail,New York,https://maps.google.com/...,False,Guitars & more
+Comfort Air Conditioning,357 Fifth Ave Brooklyn NY,(718) 555-0149,service@comfortair.com,services,New York,https://maps.google.com/...,False,AC installation
+Taco Fiesta,486 Court St Brooklyn NY,(347) 555-0150,hello@tacofiesta.com,restaurant,New York,https://maps.google.com/...,False,Street tacos
+Art Supply Store,753 Seventh Ave Brooklyn NY,(718) 555-0151,info@artsupplystore.com,retail,New York,https://maps.google.com/...,False,Artist materials
+Window Washers Inc,951 Atlantic Ave Brooklyn NY,(718) 555-0152,book@windowwashers.com,services,New York,https://maps.google.com/...,False,Residential & commercial
+French Bakery,159 Broadway Brooklyn NY,(347) 555-0153,order@frenchbakery.com,restaurant,New York,https://maps.google.com/...,False,Authentic pastries
+Camera Shop,357 Park Ave Brooklyn NY,(718) 555-0154,sales@camerashop.com,retail,New York,https://maps.google.com/...,False,Photo equipment
+Pest Control Pro,486 Smith St Brooklyn NY,(718) 555-0155,service@pestcontrolpro.com,services,New York,https://maps.google.com/...,False,Exterminator
+Sandwich Shop,753 Ninth Ave Brooklyn NY,(347) 555-0156,order@sandwichshop.com,restaurant,New York,https://maps.google.com/...,False,Fresh daily
+Jewelry Exchange,864 Flatbush Ave Brooklyn NY,(718) 555-0157,info@jewelryexchange.com,retail,New York,https://maps.google.com/...,False,Buy & sell
+Carpet Cleaners,951 Myrtle Ave Brooklyn NY,(718) 555-0158,book@carpetcleaners.com,services,New York,https://maps.google.com/...,False,Steam cleaning
+Ice Cream Parlor,135 Court St Brooklyn NY,(347) 555-0159,hello@icecreamparlor.com,restaurant,New York,https://maps.google.com/...,False,30+ flavors
+Shoe Repair Shop,246 Grand St Brooklyn NY,(718) 555-0160,service@shoerepairshop.com,services,New York,https://maps.google.com/...,False,Repairs & alterations
+Vitamin World,357 Atlantic Ave Brooklyn NY,(718) 555-0161,info@vitaminworld.com,retail,New York,https://maps.google.com/...,False,Health supplements
+Pool Service,486 Fifth Ave Brooklyn NY,(347) 555-0162,service@poolservice.com,services,New York,https://maps.google.com/...,False,Pool maintenance
+Deli & Grocery,753 Eighth Ave Brooklyn NY,(718) 555-0163,order@deligrocery.com,restaurant,New York,https://maps.google.com/...,False,Fresh sandwiches
+Optical Shop,864 Seventh Ave Brooklyn NY,(718) 555-0164,appointments@opticalshop.com,retail,New York,https://maps.google.com/...,False,Eye exams & glasses
+Moving Company,953 Court St Brooklyn NY,(718) 555-0165,quote@movingcompany.com,services,New York,https://maps.google.com/...,False,Local & long distance
+Steakhouse,159 Broadway Brooklyn NY,(347) 555-0166,reservations@steakhouse.com,restaurant,New York,https://maps.google.com/...,False,Premium cuts
+Mattress Store,246 Park Ave Brooklyn NY,(718) 555-0167,sales@mattressstore.com,retail,New York,https://maps.google.com/...,False,All sizes
+Appliance Repair,357 Smith St Brooklyn NY,(718) 555-0168,service@appliancerepair.com,services,New York,https://maps.google.com/...,False,All brands
+Noodle House,486 Atlantic Ave Brooklyn NY,(347) 555-0169,order@noodlehouse.com,restaurant,New York,https://maps.google.com/...,False,Asian noodles
+Thrift Store,753 Ninth Ave Brooklyn NY,(718) 555-0170,info@thriftstore.com,retail,New York,https://maps.google.com/...,False,Second-hand treasures
+Garage Door Service,864 Flatbush Ave Brooklyn NY,(718) 555-0171,service@garagedoorservice.com,services,New York,https://maps.google.com/...,False,Repairs & installation
+Smoothie Bar,951 Myrtle Ave Brooklyn NY,(347) 555-0172,hello@smoothiebar.com,restaurant,New York,https://maps.google.com/...,False,Fresh & healthy
+Pawn Shop,135 Court St Brooklyn NY,(718) 555-0173,loans@pawnshop.com,retail,New York,https://maps.google.com/...,False,Cash for items
+Roofer,246 Grand St Brooklyn NY,(718) 555-0174,estimate@roofer.com,services,New York,https://maps.google.com/...,False,Residential & commercial
+Wine & Spirits,357 Eighth Ave Brooklyn NY,(347) 555-0175,info@winespirits.com,retail,New York,https://maps.google.com/...,False,Large selection
+Handyman Services,486 Fifth Ave Brooklyn NY,(718) 555-0176,book@handymanservices.com,services,New York,https://maps.google.com/...,False,Any job big or small
+Chicken Wings,753 Seventh Ave Brooklyn NY,(718) 555-0177,order@chickenwings.com,restaurant,New York,https://maps.google.com/...,False,20+ flavors
+Liquor Store,864 Court St Brooklyn NY,(718) 555-0178,info@liquorstore.com,retail,New York,https://maps.google.com/...,False,Cold beer & wine
+Tree Service,951 Atlantic Ave Brooklyn NY,(347) 555-0179,estimate@treeservice.com,services,New York,https://maps.google.com/...,False,Trimming & removal
+Bagel Shop,159 Smith St Brooklyn NY,(718) 555-0180,order@bagelshop.com,restaurant,New York,https://maps.google.com/...,False,Fresh baked daily
+Convenience Store,246 Park Ave Brooklyn NY,(718) 555-0181,info@conveniencestore.com,retail,New York,https://maps.google.com/...,False,Open late
+Pressure Washing,357 Broadway Brooklyn NY,(718) 555-0182,book@pressurewashing.com,services,New York,https://maps.google.com/...,False,Driveways & siding
+Donut Shop,486 Ninth Ave Brooklyn NY,(347) 555-0183,hello@donutshop.com,restaurant,New York,https://maps.google.com/...,False,Made fresh daily
+Gift Shop,753 Flatbush Ave Brooklyn NY,(718) 555-0184,sales@giftshop.com,retail,New York,https://maps.google.com/...,False,Unique gifts
+Fence Company,864 Myrtle Ave Brooklyn NY,(718) 555-0185,estimate@fencecompany.com,services,New York,https://maps.google.com/...,False,Installation & repair
+Hot Dog Stand,951 Court St Brooklyn NY,(718) 555-0186,info@hotdogstand.com,restaurant,New York,https://maps.google.com/...,False,NYC style
+Candy Store,135 Grand St Brooklyn NY,(347) 555-0187,hello@candystore.com,retail,New York,https://maps.google.com/...,False,Sweets & treats
+Siding Contractor,246 Eighth Ave Brooklyn NY,(718) 555-0188,estimate@sidingcontractor.com,services,New York,https://maps.google.com/...,False,Vinyl & wood
+Fish Market,357 Atlantic Ave Brooklyn NY,(718) 555-0189,orders@fishmarket.com,restaurant,New York,https://maps.google.com/...,False,Daily catch
+Fabric Store,486 Fifth Ave Brooklyn NY,(347) 555-0190,sales@fabricstore.com,retail,New York,https://maps.google.com/...,False,All types of fabric
+Concrete Work,753 Court St Brooklyn NY,(718) 555-0191,estimate@concretework.com,services,New York,https://maps.google.com/...,False,Patios & walkways
+Sub Shop,864 Seventh Ave Brooklyn NY,(718) 555-0192,order@subshop.com,restaurant,New York,https://maps.google.com/...,False,Giant subs
+Party Supply Store,953 Ninth Ave Brooklyn NY,(718) 555-0193,sales@partysupplystore.com,retail,New York,https://maps.google.com/...,False,Balloons & decorations
+Masonry,159 Park Ave Brooklyn NY,(347) 555-0194,estimate@masonry.com,services,New York,https://maps.google.com/...,False,Brick & stone
+Fried Chicken,246 Smith St Brooklyn NY,(718) 555-0195,order@friedchicken.com,restaurant,New York,https://maps.google.com/...,False,Southern style
+Office Supply Store,357 Broadway Brooklyn NY,(718) 555-0196,sales@officesupplystore.com,retail,New York,https://maps.google.com/...,False,Everything for office
+Painting Contractor,486 Atlantic Ave Brooklyn NY,(718) 555-0197,estimate@paintingcontractor.com,services,New York,https://maps.google.com/...,False,Interior & exterior
+Rib Restaurant,753 Myrtle Ave Brooklyn NY,(347) 555-0198,info@ribrestaurant.com,restaurant,New York,https://maps.google.com/...,False,Fall-off-the-bone
+Pet Store,864 Court St Brooklyn NY,(718) 555-0199,info@petstore.com,retail,New York,https://maps.google.com/...,False,Supplies & food
+Flooring Installer,951 Grand St Brooklyn NY,(718) 555-0200,estimate@flooringinstaller.com,services,New York,https://maps.google.com/...,False,Hardwood & tile
