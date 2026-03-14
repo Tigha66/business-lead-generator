@@ -1,0 +1,6 @@
+business_name,address,phone,email,industry,location,google_maps_url,has_website,notes
+Tony's Pizza,123 Main St New York NY,(212) 555-0101,,restaurant,New York,https://maps.google.com/...,False,Family-owned pizzeria since 1985
+Green Garden Cafe,456 Oak Ave Brooklyn NY,(718) 555-0202,,restaurant,New York,https://maps.google.com/...,False,Organic vegetarian cafe
+Mike's Auto Repair,789 First Ave Queens NY,(347) 555-0303,,services,New York,https://maps.google.com/...,False,Full service auto repair
+Sunrise Bakery,321 Second St Bronx NY,(718) 555-0404,,restaurant,New York,https://maps.google.com/...,False,Fresh bread daily
+City Laundromat,654 Third Ave Manhattan NY,(212) 555-0505,,services,New York,https://maps.google.com/...,False,24/7 self-service laundry
