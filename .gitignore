@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# OpenClaw config (contains credentials)
+*.json
+!package.json
+sender_info.json
+smtp.json
+pricing.json
+google_maps_api_key.txt
+
+# Leads and proposals (sensitive data)
+*.csv
+!sample-leads.csv
+leads-*.csv
+proposals-*.csv
+followups-*.csv
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Skill packages
+*.skill
