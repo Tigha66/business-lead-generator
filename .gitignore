@@ -23,20 +23,32 @@ wheels/
 .installed.cfg
 *.egg
 
+# 🔒 SECURITY - Never push these files
+
 # OpenClaw config (contains credentials)
+~/.openclaw/sender_info.json
+~/.openclaw/smtp.json
+~/.openclaw/pricing.json
+~/.openclaw/google_maps_api_key.txt
 *.json
 !package.json
+!skills/*/assets/*.json
+
+# Personal data & credentials
 sender_info.json
 smtp.json
 pricing.json
 google_maps_api_key.txt
+.env
+.env.local
+*.pem
+*.key
 
-# Leads and proposals (sensitive data)
-*.csv
-!sample-leads.csv
+# Leads and proposals (your business data)
 leads-*.csv
 proposals-*.csv
 followups-*.csv
+!skills/business-lead-gen/assets/sample-leads.csv
 
 # Logs
 *.log
