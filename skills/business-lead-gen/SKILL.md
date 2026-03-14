@@ -203,10 +203,26 @@ Pre-built templates in `assets/email-templates/`:
 
 ## Related Files
 
-- `scripts/find_businesses.py` - Business discovery
-- `scripts/generate_proposals.py` - Email generation
-- `scripts/send_emails.py` - Email delivery
-- `assets/email-templates/proposal.md` - Main template
-- `assets/website-templates/*/` - Site templates
-- `references/compliance.md` - Legal guidelines
+### Core Scripts
+- `scripts/setup_wizard.py` - Interactive setup wizard
+- `scripts/find_businesses.py` - Business discovery (manual/Selenium/API)
+- `scripts/generate_proposals.py` - Personalized email generation
+- `scripts/send_emails.py` - Campaign delivery with rate limiting
+
+### Templates
+- `assets/email-templates/proposal.md` - Main proposal email
+- `assets/email-templates/follow-up-1.md` - First follow-up
+- `assets/website-templates/restaurant/index.html` - Restaurant template
+- `assets/website-templates/retail/index.html` - Retail store template
+- `assets/website-templates/services/index.html` - Service provider template
+
+### Documentation
+- `README.md` - Complete overview
+- `QUICKSTART.md` - Quick start guide
+- `BUSINESS_PLAN.md` - Full business strategy
+- `references/compliance.md` - CAN-SPAM, GDPR guidelines
 - `references/manual-research.md` - Manual research guide
+
+### Configuration Examples
+- `assets/sender-info.example.json` - Sender info template
+- `assets/sample-leads.csv` - Sample lead data
