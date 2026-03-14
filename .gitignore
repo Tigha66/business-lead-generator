@@ -66,3 +66,6 @@ Thumbs.db
 
 # Skill packages
 *.skill
+
+# External projects (have their own repos)
+paperclip/
