@@ -1,0 +1,14 @@
+# Python dependencies for business-lead-generator
+
+# Core
+selenium>=4.0.0
+googlemaps>=4.0.0
+
+# Optional - for enhanced functionality
+requests>=2.28.0
+python-dotenv>=1.0.0
+
+# Development
+pytest>=7.0.0
+black>=23.0.0
+flake8>=6.0.0
