@@ -1,0 +1,8 @@
+# Business Lead Gen - Automated Follow-Ups
+# Run daily at 10 AM to check and send follow-ups
+
+# Follow-up #1: 3 days after initial email
+0 10 * * * cd /home/admin/.openclaw/workspace/skills/business-lead-gen && python3 scripts/send_follow_ups.py --input proposals-100.csv --follow-up 1 >> logs/followup.log 2>&1
+
+# Follow-up #2: 10 days after initial email  
+0 10 * * * cd /home/admin/.openclaw/workspace/skills/business-lead-gen && python3 scripts/send_follow_ups.py --input proposals-100.csv --follow-up 2 >> logs/followup.log 2>&1
