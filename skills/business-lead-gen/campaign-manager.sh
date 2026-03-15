@@ -22,16 +22,34 @@ show_menu() {
         echo "  Total: $total | Sent: $sent | Draft: $draft"
     fi
     
-    # Count batch files
-    batch_count=$(ls -1 batches/proposals-*.csv 2>/dev/null | wc -l)
-    if [ $batch_count -gt 0 ]; then
+    # Count US batch files
+    us_batch_count=$(ls -1 batches/proposals-*.csv 2>/dev/null | wc -l)
+    if [ $us_batch_count -gt 0 ]; then
         echo ""
-        echo "Available Batches:"
-        ls -1 batches/proposals-*.csv 2>/dev/null | while read f; do
+        echo "🇺🇸 US Batches:"
+        ls -1 batches/proposals-*.csv 2>/dev/null | head -6 | while read f; do
             name=$(basename "$f")
             count=$(tail -n +2 "$f" | wc -l)
             echo "  • $name ($count leads)"
         done
+        if [ $us_batch_count -gt 6 ]; then
+            echo "  ... and $((us_batch_count - 6)) more"
+        fi
+    fi
+    
+    # Count UK batch files
+    uk_batch_count=$(ls -1 batches-uk/proposals-*.csv 2>/dev/null | wc -l)
+    if [ $uk_batch_count -gt 0 ]; then
+        echo ""
+        echo "🇬🇧 UK Batches:"
+        ls -1 batches-uk/proposals-*.csv 2>/dev/null | head -6 | while read f; do
+            name=$(basename "$f")
+            count=$(tail -n +2 "$f" | wc -l)
+            echo "  • $name ($count leads)"
+        done
+        if [ $uk_batch_count -gt 6 ]; then
+            echo "  ... and $((uk_batch_count - 6)) more"
+        fi
     fi
     
     echo ""
@@ -41,11 +59,14 @@ show_menu() {
     echo "2. Send NYC emails (50 today)"
     echo "3. Send follow-up #1 (3 days)"
     echo "4. Send follow-up #2 (10 days)"
-    echo "5. Launch new batch (LA Restaurants)"
-    echo "6. Launch new batch (Chicago Restaurants)"
-    echo "7. Launch new batch (Miami Restaurants)"
+    echo "5. Launch US batch (LA Restaurants)"
+    echo "6. Launch US batch (Chicago Restaurants)"
+    echo "7. Launch US batch (Miami Restaurants)"
     echo "8. Setup automated follow-ups (cron)"
     echo "9. View campaign stats"
+    echo "U. Launch UK batch (London Restaurants)"
+    echo "K. Launch UK batch (Manchester Restaurants)"
+    echo "L. Launch UK batch (Birmingham Restaurants)"
     echo "0. Exit"
     echo ""
 }
@@ -90,11 +111,9 @@ show_stats() {
     echo ""
     
     if [ -f "proposals-100.csv" ]; then
-        echo "NYC Campaign:"
+        echo "🇺🇸 NYC Campaign:"
         total=$(tail -n +2 proposals-100.csv | wc -l)
         sent=$(grep -c ",sent," proposals-100.csv 2>/dev/null || echo 0)
-        reply_rate="~5-10%"
-        conv_rate="~1-3%"
         
         echo "  Emails sent: $sent / $total"
         echo "  Expected replies: $((sent * 5 / 100)) - $((sent * 10 / 100))"
@@ -103,13 +122,25 @@ show_stats() {
     fi
     
     echo ""
-    echo "Batch Inventory:"
-    ls -1 batches/proposals-*.csv 2>/dev/null | while read f; do
-        name=$(basename "$f")
-        count=$(tail -n +2 "$f" | wc -l)
-        potential=$((count * 2 / 100 * 397))
-        echo "  • $name: $count leads (~£$potential potential)"
-    done
+    echo "📦 Lead Inventory:"
+    us_count=$(ls -1 batches/proposals-*.csv 2>/dev/null | wc -l)
+    uk_count=$(ls -1 batches-uk/proposals-*.csv 2>/dev/null | wc -l)
+    us_leads=$((us_count * 50))
+    uk_leads=$((uk_count * 50))
+    total_leads=$((us_leads + uk_leads + 100))
+    
+    echo "  🇺🇸 US Batches: $us_count ($us_leads leads)"
+    echo "  🇬🇧 UK Batches: $uk_count ($uk_leads leads)"
+    echo "  🗽 NYC Original: 100 leads"
+    echo "  ━━━━━━━━━━━━━━━━━━━━━━━━━"
+    echo "  TOTAL: $total_leads leads"
+    
+    echo ""
+    echo "💰 Total Revenue Potential:"
+    total_potential_conservative=$((total_leads * 1 / 100 * 397))
+    total_potential_optimistic=$((total_leads * 3 / 100 * 397))
+    echo "  Conservative (1%): £$total_potential_conservative"
+    echo "  Optimistic (3%): £$total_potential_optimistic"
     
     echo ""
 }
@@ -124,11 +155,14 @@ while true; do
         2) send_nyc 50 ;;
         3) send_followup 1 ;;
         4) send_followup 2 ;;
-        5) launch_batch "proposals-LA-Restaurants-20260315.csv" ;;
-        6) launch_batch "proposals-Chicago-Restaurants-20260315.csv" ;;
-        7) launch_batch "proposals-Miami-Restaurants-20260315.csv" ;;
+        5) launch_batch "batches/proposals-LA-Restaurants-20260315.csv" ;;
+        6) launch_batch "batches/proposals-Chicago-Restaurants-20260315.csv" ;;
+        7) launch_batch "batches/proposals-Miami-Restaurants-20260315.csv" ;;
         8) setup_automation ;;
         9) show_stats ;;
+        U|u) launch_batch "batches-uk/proposals-London-Restaurants-UK-20260315.csv" ;;
+        K|k) launch_batch "batches-uk/proposals-Manchester-Restaurants-UK-20260315.csv" ;;
+        L|l) launch_batch "batches-uk/proposals-Birmingham-Restaurants-UK-20260315.csv" ;;
         0) echo "👋 Goodbye!"; exit 0 ;;
         *) echo "❌ Invalid choice" ;;
     esac
