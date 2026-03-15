@@ -74,10 +74,11 @@ def send_email(smtp_config: Dict, to_email: str, subject: str, body: str) -> boo
 
 def update_proposals_csv(proposals: List[Dict], output_path: str):
     """Update proposals CSV with send status."""
-    fieldnames = [
-        'business_name', 'email_to', 'subject', 'body',
-        'status', 'sent_date', 'notes'
-    ]
+    # Get all fieldnames from the first proposal, preserving order
+    if not proposals:
+        return
+    
+    fieldnames = list(proposals[0].keys())
     
     with open(output_path, 'w', newline='', encoding='utf-8') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
