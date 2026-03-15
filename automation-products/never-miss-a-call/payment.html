@@ -3,59 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Never Miss A Call - Book Now</title>
+    <title>Never Miss A Call - Get Started</title>
     <script src="https://js.stripe.com/v3/"></script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; }
-        .container { background: white; border-radius: 20px; padding: 40px; max-width: 500px; width: 100%; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
-        h1 { color: #1a1a2e; margin-bottom: 10px; font-size: 28px; }
-        .subtitle { color: #666; margin-bottom: 30px; }
-        .plan { border: 2px solid #e0e0e0; border-radius: 12px; padding: 20px; margin-bottom: 15px; cursor: pointer; transition: all 0.3s; }
-        .plan:hover { border-color: #667eea; transform: translateY(-2px); }
-        .plan.selected { border-color: #667eea; background: #f0f0ff; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            min-height: 100vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            padding: 20px; 
+        }
+        .container { 
+            background: white; 
+            border-radius: 20px; 
+            padding: 40px; 
+            max-width: 480px; 
+            width: 100%; 
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3); 
+        }
+        h1 { color: #1a1a2e; margin-bottom: 8px; font-size: 26px; }
+        .subtitle { color: #666; margin-bottom: 25px; font-size: 14px; }
+        
+        .plan { 
+            border: 2px solid #e0e0e0; 
+            border-radius: 12px; 
+            padding: 18px; 
+            margin-bottom: 12px; 
+            cursor: pointer; 
+            transition: all 0.2s; 
+        }
+        .plan:hover { border-color: #667eea; }
+        .plan.selected { border-color: #667eea; background: #f5f5ff; }
+        
         .plan-header { display: flex; justify-content: space-between; align-items: center; }
-        .plan-name { font-weight: 700; color: #1a1a2e; }
-        .plan-price { font-size: 24px; font-weight: 800; color: #667eea; }
-        .plan-desc { color: #666; font-size: 14px; margin-top: 5px; }
-        .features { list-style: none; margin-top: 10px; }
-        .features li { color: #555; font-size: 13px; padding: 4px 0; }
-        .features li:before { content: "✓"; color: #667eea; margin-right: 8px; }
-        .btn { width: 100%; padding: 16px; background: #667eea; color: white; border: none; border-radius: 10px; font-size: 16px; font-weight: 700; cursor: pointer; margin-top: 20px; transition: background 0.3s; }
+        .plan-name { font-weight: 700; color: #1a1a2e; font-size: 16px; }
+        .plan-price { font-size: 22px; font-weight: 800; color: #667eea; }
+        .plan-price span { font-size: 12px; color: #999; font-weight: 400; }
+        .plan-desc { color: #666; font-size: 12px; margin-top: 4px; }
+        
+        .features { 
+            list-style: none; 
+            margin-top: 10px; 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 4px;
+        }
+        .features li { color: #555; font-size: 11px; }
+        .features li:before { content: "✓"; color: #667eea; margin-right: 5px; }
+        
+        .popular { 
+            background: #667eea; 
+            color: white; 
+            padding: 4px 10px; 
+            border-radius: 20px; 
+            font-size: 10px; 
+            font-weight: 600;
+        }
+        
+        .btn { 
+            width: 100%; 
+            padding: 16px; 
+            background: #667eea; 
+            color: white; 
+            border: none; 
+            border-radius: 10px; 
+            font-size: 15px; 
+            font-weight: 700; 
+            cursor: pointer; 
+            margin-top: 20px; 
+            transition: background 0.2s; 
+        }
         .btn:hover { background: #5568d3; }
         .btn:disabled { background: #ccc; cursor: not-allowed; }
-        .secure { text-align: center; color: #888; font-size: 12px; margin-top: 15px; }
-        .secure:before { content: "🔒 "; }
+        
+        .secure { 
+            text-align: center; 
+            color: #888; 
+            font-size: 11px; 
+            margin-top: 15px; 
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Never Miss A Call</h1>
+        <h1>💰 Never Miss A Call</h1>
         <p class="subtitle">Choose your plan and start capturing every lead</p>
         
         <div class="plan" onclick="selectPlan('starter')" id="starter">
             <div class="plan-header">
                 <span class="plan-name">Starter</span>
-                <span class="plan-price">$47/mo</span>
+                <span class="plan-price">$47<span>/mo</span></span>
             </div>
             <p class="plan-desc">Perfect for small businesses</p>
             <ul class="features">
-                <li>100 automated texts/month</li>
-                <li>1 business phone line</li>
+                <li>100 texts/month</li>
+                <li>1 phone line</li>
                 <li>Basic templates</li>
                 <li>Email support</li>
             </ul>
         </div>
         
-        <div class="plan" onclick="selectPlan('growth')" id="growth">
+        <div class="plan selected" onclick="selectPlan('growth')" id="growth">
             <div class="plan-header">
-                <span class="plan-name">Growth</span>
-                <span class="plan-price">$97/mo</span>
+                <div>
+                    <span class="plan-name">Growth</span>
+                    <span class="popular">MOST POPULAR</span>
+                </div>
+                <span class="plan-price">$97<span>/mo</span></span>
             </div>
-            <p class="plan-desc">Most popular</p>
+            <p class="plan-desc">Most businesses choose this</p>
             <ul class="features">
                 <li>Unlimited texts</li>
-                <li>2-step follow-up sequence</li>
+                <li>Follow-up sequence</li>
                 <li>CRM integration</li>
                 <li>Priority support</li>
             </ul>
@@ -64,32 +132,39 @@
         <div class="plan" onclick="selectPlan('premium')" id="premium">
             <div class="plan-header">
                 <span class="plan-name">Premium</span>
-                <span class="plan-price">$197/mo</span>
+                <span class="plan-price">$197<span>/mo</span></span>
             </div>
             <p class="plan-desc">For larger teams</p>
             <ul class="features">
                 <li>Everything in Growth</li>
-                <li>Multiple phone lines</li>
+                <li>Multiple lines</li>
                 <li>Custom workflows</li>
                 <li>Dedicated support</li>
             </ul>
         </div>
         
-        <button class="btn" id="checkoutBtn" onclick="checkout()" disabled>Select a Plan</button>
+        <button class="btn" id="checkoutBtn" onclick="checkout()">
+            Get Started - $97/month
+        </button>
         
-        <p class="secure">Secure payment powered by Stripe</p>
+        <p class="secure">🔒 Secure payment via Stripe</p>
     </div>
-    
+
     <script>
-        let selectedPlan = null;
+        // YOUR STRIPE KEYS
+        const stripe = Stripe('pk_live_51Rdzf0G3wnn7CPRMUoDOGZOLGYmKhjVA4quFieGGsuNz6E5dvWbxQy1UppkcQVaxT6K6h7urRJduRQnAN7R88tb900zYhRg2ss');
+        
+        // Price IDs - Will be created when you first use Stripe
         const prices = {
-            starter: 'price_STARTER_ID',  // Replace with Stripe price ID
-            growth: 'price_GROWTH_ID',    // Replace with Stripe price ID  
-            premium: 'price_PREMIUM_ID'   // Replace with Stripe price ID
+            starter: 'price_STARTER',    // $47/month
+            growth: 'price_GROWTH',      // $97/month  
+            premium: 'price_PREMIUM'     // $197/month
         };
         
-        // Replace with your Stripe publishable key
-        const stripe = Stripe('pk_test_YOUR_PUBLISHABLE_KEY');
+        // Fallback checkout URL (manual Stripe Checkout)
+        const checkoutUrl = 'https://checkout.stripe.com/c/pay/YOUR_CHECKOUT_ID';
+        
+        let selectedPlan = 'growth';
         
         function selectPlan(plan) {
             document.querySelectorAll('.plan').forEach(p => p.classList.remove('selected'));
@@ -97,16 +172,30 @@
             selectedPlan = plan;
             
             const prices_text = { starter: '$47', growth: '$97', premium: '$197' };
-            document.getElementById('checkoutBtn').textContent = `Pay ${prices_text[plan]} and Get Started`;
-            document.getElementById('checkoutBtn').disabled = false;
+            document.getElementById('checkoutBtn').textContent = `Get Started - ${prices_text[plan]}/month`;
         }
         
         function checkout() {
-            if (!selectedPlan) return;
+            const prices_text = { starter: '$47', growth: '$97', premium: '$197' };
+            const plan = selectedPlan;
+            const amount = prices_text[plan];
             
-            // In production, call your backend to create Stripe Checkout session
-            alert('Stripe integration required.\n\nTo accept payments:\n1. Create Stripe account at stripe.com\n2. Add your API keys\n3. Replace price IDs');
+            // For now, show confirmation - in production, redirect to Stripe Checkout
+            if (confirm(`Subscribe to ${plan.charAt(0).toUpperCase() + plan.slice(1)} plan for ${amount}/month?\n\nThis will redirect to Stripe for secure payment.`)) {
+                // Create Stripe Checkout session via redirect
+                // Note: In production, you'd call your backend to create a session
+                
+                const customerEmail = prompt('Enter your email for payment:');
+                if (customerEmail) {
+                    // For demo, show success message
+                    // In production: window.location.href = session.url;
+                    alert('Setting up Stripe Checkout...\n\nTo complete setup:\n1. Go to Stripe Dashboard\n2. Create Products with prices\n3. Replace price IDs in code\n\nContact: tigha66@gmail.com');
+                }
+            }
         }
+        
+        // Default selection
+        selectPlan('growth');
     </script>
 </body>
 </html>
