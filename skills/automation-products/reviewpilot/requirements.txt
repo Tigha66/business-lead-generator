@@ -1,0 +1,21 @@
+# ReviewPilot MVP Dependencies
+
+# Google API (for Google Business Profile)
+google-api-python-client==2.100.0
+google-auth-httplib2==0.1.1
+google-auth-oauthlib==1.1.0
+
+# Claude API (for AI responses)
+anthropic==0.7.0
+
+# Email (built-in, but listed for clarity)
+# smtplib (built-in)
+# email (built-in)
+
+# Utilities
+python-dotenv==1.0.0
+
+# Production (optional - for web dashboard)
+# fastapi==0.104.1
+# uvicorn==0.24.0
+# supabase==2.0.0

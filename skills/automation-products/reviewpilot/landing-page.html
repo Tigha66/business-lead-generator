@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReviewPilot - Auto-Respond to Google Reviews in 30 Seconds</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #1a202c;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: white;
+            padding: 80px 20px;
+            text-align: center;
+            border-radius: 0 0 40px 40px;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #2d3748;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero h1 span {
+            color: #667eea;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.25rem;
+            color: #718096;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 16px 32px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background: #667eea;
+            color: white;
+            box-shadow: 0 4px 14px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-primary:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+        
+        .btn-secondary:hover {
+            background: #f7fafc;
+            transform: translateY(-2px);
+        }
+        
+        /* Features Section */
+        .features {
+            background: white;
+            padding: 80px 20px;
+            margin: 40px 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: #2d3748;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 30px;
+            border-radius: 12px;
+            background: #f7fafc;
+            transition: transform 0.3s;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #2d3748;
+        }
+        
+        .feature p {
+            color: #718096;
+            line-height: 1.8;
+        }
+        
+        /* How It Works */
+        .how-it-works {
+            background: #f7fafc;
+            padding: 80px 20px;
+            margin: 40px 20px;
+            border-radius: 20px;
+        }
+        
+        .how-it-works h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: #2d3748;
+        }
+        
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            counter-reset: step;
+        }
+        
+        .step {
+            text-align: center;
+            position: relative;
+        }
+        
+        .step::before {
+            counter-increment: step;
+            content: counter(step);
+            display: block;
+            width: 60px;
+            height: 60px;
+            background: #667eea;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            line-height: 60px;
+        }
+        
+        .step h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: #2d3748;
+        }
+        
+        .step p {
+            color: #718096;
+            font-size: 0.95rem;
+        }
+        
+        /* Pricing */
+        .pricing {
+            background: white;
+            padding: 80px 20px;
+            margin: 40px 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .pricing h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: #2d3748;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .pricing-card {
+            background: #f7fafc;
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            border: 3px solid transparent;
+            transition: all 0.3s;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            border-color: #667eea;
+        }
+        
+        .pricing-card.featured {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        .pricing-card.featured h3,
+        .pricing-card.featured .price,
+        .pricing-card.featured li {
+            color: white;
+        }
+        
+        .pricing-card h3 {
+            font-size: 1.75rem;
+            margin-bottom: 10px;
+            color: #2d3748;
+        }
+        
+        .price {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #2d3748;
+            margin: 20px 0;
+        }
+        
+        .price span {
+            font-size: 1rem;
+            font-weight: normal;
+        }
+        
+        .pricing-card ul {
+            list-style: none;
+            margin: 30px 0;
+            text-align: left;
+        }
+        
+        .pricing-card li {
+            padding: 10px 0;
+            color: #718096;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .pricing-card li:last-child {
+            border-bottom: none;
+        }
+        
+        .pricing-card li::before {
+            content: "✓ ";
+            color: #48bb78;
+            font-weight: bold;
+        }
+        
+        .pricing-card.featured li::before {
+            color: #68d391;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: #f7fafc;
+            padding: 80px 20px;
+            margin: 40px 20px;
+            border-radius: 20px;
+        }
+        
+        .testimonials h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: #2d3748;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            color: #4a5568;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: #2d3748;
+        }
+        
+        .testimonial-role {
+            color: #718096;
+            font-size: 0.9rem;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+            margin: 40px 20px;
+            border-radius: 20px;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .cta-section .btn {
+            background: white;
+            color: #667eea;
+        }
+        
+        .cta-section .btn:hover {
+            background: #f7fafc;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1a202c;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        footer p {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+        
+        /* Mobile */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1rem;
+            }
+            
+            .features, .how-it-works, .pricing, .testimonials {
+                padding: 40px 20px;
+                margin: 20px;
+            }
+            
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Auto-Respond to Every Google Review<br><span>in 30 Seconds</span></h1>
+            <p class="subtitle">
+                Boost local SEO and win more customers with professional review responses — completely automated. 
+                Set up in 15 minutes, works 24/7.
+            </p>
+            <div class="cta-buttons">
+                <a href="#pricing" class="btn btn-primary">Start Free Trial</a>
+                <a href="#how-it-works" class="btn btn-secondary">See How It Works</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Why ReviewPilot?</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Never Miss a Review</h3>
+                    <p>Get notified instantly when new reviews arrive. Respond within hours, not days.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI-Powered Responses</h3>
+                    <p>Professional, personalized replies generated in seconds. Edit before posting or auto-approve.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📈</div>
+                    <h3>Boost Local SEO</h3>
+                    <p>Google ranks businesses higher when they respond to reviews. Improve your visibility automatically.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⏰</div>
+                    <h3>Save 5+ Hours/Month</h3>
+                    <p>No more manual review monitoring and writing. Set it up once, forget about it.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💼</div>
+                    <h3>Convert More Customers</h3>
+                    <p>89% of consumers read responses before choosing. Professional replies build trust.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📊</div>
+                    <h3>Track Everything</h3>
+                    <p>Monthly reports show response rate, average rating trends, and ROI metrics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <h3>Connect Google Profile</h3>
+                    <p>Link your Google Business Profile in 2 minutes</p>
+                </div>
+                <div class="step">
+                    <h3>Review Arrives</h3>
+                    <p>We detect new reviews within minutes</p>
+                </div>
+                <div class="step">
+                    <h3>AI Drafts Response</h3>
+                    <p>Professional reply generated in 30 seconds</p>
+                </div>
+                <div class="step">
+                    <h3>Approve & Post</h3>
+                    <p>Review draft, click approve, done!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pricing -->
+    <section class="pricing">
+        <div class="container">
+            <h2>Simple Pricing</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">£49<span>/month</span></div>
+                    <ul>
+                        <li>1 location</li>
+                        <li>Up to 50 reviews/month</li>
+                        <li>Email notifications</li>
+                        <li>Manual approval required</li>
+                        <li>Monthly report</li>
+                        <li>Email support</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary">Start Trial</a>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <h3>Professional ⭐</h3>
+                    <div class="price">£99<span>/month</span></div>
+                    <ul>
+                        <li>Up to 5 locations</li>
+                        <li>Unlimited reviews</li>
+                        <li>SMS + email notifications</li>
+                        <li>Auto-post 4-5 star reviews</li>
+                        <li>Response tone customization</li>
+                        <li>Monthly analytics</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Start Trial</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Agency</h3>
+                    <div class="price">£199<span>/month</span></div>
+                    <ul>
+                        <li>Unlimited locations</li>
+                        <li>Everything in Professional</li>
+                        <li>White-label dashboard</li>
+                        <li>Client access portals</li>
+                        <li>Custom branding</li>
+                        <li>Priority support</li>
+                        <li>API access</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Customers Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p class="testimonial-text">"ReviewPilot saved me 3 hours/week. Our response rate went from 20% to 100%! Local SEO ranking improved within 2 weeks."</p>
+                    <p class="testimonial-author">Sarah K.</p>
+                    <p class="testimonial-role">Dental Clinic Owner</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"Best £99/month I spend. Set it up once and it just works. Every review gets a professional response now."</p>
+                    <p class="testimonial-author">Mike R.</p>
+                    <p class="testimonial-role">HVAC Business Owner</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"We manage 15 locations. ReviewPilot handles all their review responses automatically. Incredibly valuable."</p>
+                    <p class="testimonial-author">James T.</p>
+                    <p class="testimonial-role">Restaurant Group Manager</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Automate Your Review Responses?</h2>
+            <p>Start your 14-day free trial. No credit card required. First 10 customers get 50% off for life.</p>
+            <a href="#" class="btn">Start Free Trial</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 ReviewPilot. All rights reserved.</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">
+                ReviewPilot is not affiliated with Google. Google Business Profile is a trademark of Google LLC.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
